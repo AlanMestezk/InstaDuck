@@ -1,5 +1,5 @@
-import { Style }             from "./Header.module"
-import { View, Text, Image } from "react-native"
+import { Style }             from "./styles/Header.module"
+import { View, Text, Image, TouchableOpacity } from "react-native"
 
 interface HeaderProps{
     titleIcon: string | undefined | any
@@ -11,15 +11,25 @@ export const Header= ({titleIcon, sendIcon}:HeaderProps )=>{
     return(
         <View style={Style.header}>
             
-            <Image
-                source={titleIcon}
-                style={Style.logoIcon}
-            />
+            <TouchableOpacity>
 
-            <Image
-                source={sendIcon}
-                style={Style.sendIcon}
-            />
+                <Image
+                    source={titleIcon}
+                    style={Style.logoIcon}
+                />
+
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+                
+                <Image
+                    source={sendIcon}
+                    style={Style.sendIcon}
+                />
+
+            </TouchableOpacity>
+
+
 
         </View>
     )

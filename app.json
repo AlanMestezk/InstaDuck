@@ -18,6 +18,7 @@
     },
     "web": {
       "favicon": "./src/assets/InstaDuckIcon.png"
-    }
+    },
+    "userInterfaceStyle": "automatic"
   }
 }
