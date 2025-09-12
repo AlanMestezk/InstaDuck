@@ -1,12 +1,12 @@
-import { posts }                         from "../../data/posts"
-import { Styles }                        from "./styles/Storys.module"
-import { useState }                      from "react"
+import { posts }                                           from "../../data/posts"
+import { Styles }                                          from "./styles/Storys.module"
 import { View, ScrollView, Image, Text, TouchableOpacity } from "react-native"
 
 export const Storys = ()=>{
 
 
     return(
+
         <View style={Styles.container}>
 
             <ScrollView 
@@ -16,6 +16,7 @@ export const Storys = ()=>{
 
                 {
                     posts.map(
+
                         (posts)=>(
                             <TouchableOpacity style={Styles.viewUser} key={posts.id}>
 
@@ -34,6 +35,7 @@ export const Storys = ()=>{
                             </TouchableOpacity>
                         )
                     )
+
                 }
 
               
@@ -41,5 +43,6 @@ export const Storys = ()=>{
 
 
         </View>
+        
     )
 }

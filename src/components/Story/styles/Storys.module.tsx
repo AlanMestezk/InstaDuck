@@ -5,20 +5,22 @@ export const Styles = StyleSheet.create(
     {
         container:{
             marginTop: 50,
-            height:150
+            height:133
         },
         viewUser:{
             width: 100,
-            height: 130,
+            height: 140,
             padding: 12,
-            margin: 12,
+            marginLeft: 8,
+            marginRight: 8,
+            marginTop: 8,
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center'
         },
         viewImage:{
             width: 90,
-            height: 130,
+            height: 140,
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center',
@@ -26,16 +28,17 @@ export const Styles = StyleSheet.create(
 
         },
         imageUser:{
-            width: 100,
-            height: 100,
+            width: 104,
+            height: 104,
             borderRadius: 100,
-            borderWidth: 2.8,
+            borderWidth: 3,
             borderColor: 'orangered'
 
         },
         nameUser:{
             color: 'aliceblue',
-            fontSize: 15
+            fontSize: 15,
+            fontWeight: 'bold'
         }
     }
 )

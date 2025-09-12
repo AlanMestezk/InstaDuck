@@ -1,7 +1,7 @@
 import { posts }                                          from '../data/posts'
 import { Header }                                         from '../components/Header/Header'
 import { styles }                                         from './AppScreen.module'
-import { useState }                                       from "react"
+import { useMemo, useState }                              from "react"
 import { View, Text, Image, TouchableOpacity,  FlatList } from "react-native"
 import { Storys }                                         from '../components/Story/Storys'
 import { ListContent }                                    from '../components/ListContent/ListContent'
@@ -23,6 +23,13 @@ interface AppScreenProps{
 export const AppScreen = ()=>{
 
     const [feed, setFeed] = useState<AppScreenProps[]>(posts)
+
+    // Embaralha os dados só uma vez por renderização
+    const shuffledFeed = useMemo(
+        () => {
+            return [...feed].sort(() => Math.random() - 0.5)
+        }, [feed]
+    );
 
     return(
 
@@ -47,7 +54,7 @@ export const AppScreen = ()=>{
 
                 <FlatList 
                     showsHorizontalScrollIndicator={false}
-                    data={feed}
+                    data={shuffledFeed}
                     keyExtractor={(item)=> item.id}
                     renderItem={
                         ({item})=> <ListContent data={item}/>
