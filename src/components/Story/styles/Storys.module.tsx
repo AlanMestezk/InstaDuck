@@ -5,7 +5,8 @@ export const Styles = StyleSheet.create(
     {
         container:{
             marginTop: 50,
-            height:133
+            height:133,
+            marginBottom: 10
         },
         viewUser:{
             width: 100,

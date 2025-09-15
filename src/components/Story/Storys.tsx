@@ -9,6 +9,7 @@ export const Storys = ()=>{
 
         <View style={Styles.container}>
 
+
             <ScrollView 
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}

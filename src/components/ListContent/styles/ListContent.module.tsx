@@ -43,7 +43,7 @@ export const Styles = StyleSheet.create(
             justifyContent: 'flex-start',
             alignItems: 'center',
             flexDirection: 'row',
-            padding: 5,
+            padding: 5
         },
         touchButons:{
             padding: 6,
@@ -57,9 +57,15 @@ export const Styles = StyleSheet.create(
             width: 30,
             height: 30
         },
+        textNumber:{
+            color: 'aliceblue',
+            marginRight: 10,
+            fontWeight:'bold'
+        },
         viewNameDescription: {
             flex: 1,
-            padding: 12,
+            padding: 10,
+            marginTop: -4
         },
         nameText: {
             color: "aliceblue",
