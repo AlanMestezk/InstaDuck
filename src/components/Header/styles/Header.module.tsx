@@ -7,7 +7,7 @@ export const Style  = StyleSheet.create(
             height: 55,
             flexDirection: 'row',
             justifyContent: 'space-between',
-            marginTop: 32, 
+            marginTop: -10, 
             padding: 18,
         },
         logoIcon:{

@@ -5,11 +5,17 @@ import { AppScreen } from './src/screens/AppScreen';
 
 export default function App() {
   return (
-    <View style={Style.body}>
-       <StatusBar barStyle="light-content" backgroundColor="#121212" />
-      <AppScreen/>
 
-    </View>
+    <>
+      <View style={Style.viewInfosPhone}>
+      </View>
+    
+      <View style={Style.body}>
+        <StatusBar barStyle="light-content" backgroundColor="#242424"  />
+        <AppScreen/>
+
+      </View>
+    </>
   );
 }
 

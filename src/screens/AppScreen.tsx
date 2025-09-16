@@ -1,7 +1,7 @@
 import { posts } from '../data/posts'
 import { styles } from './AppScreen.module'
 import { useMemo, useState } from "react"
-import { View, FlatList } from "react-native"
+import { View, FlatList, ScrollView } from "react-native"
 import { ListContent } from '../components/ListContent/ListContent'
 import { Header } from '../components/Header/Header'
 
@@ -31,24 +31,40 @@ export const AppScreen = () => {
     );
 
     return (
-        <View style={styles.container}>
 
-            <Header 
-                sendIcon={sendDuck}
-                titleIcon={logoIcon}
-            />
+        
+            <View style={styles.container}>
+
+                
 
 
-            {/* FlatList ajustada para ocupar apenas o espaço restante */}
-            <FlatList 
-                data={shuffledFeed}
-                keyExtractor={(item) => item.id}
-                renderItem={({ item }) => <ListContent data={item} />}
-                showsVerticalScrollIndicator={false}
-                contentContainerStyle={{ paddingBottom: 20 }}
-                style={{ flexGrow: 0 }} // evita que ocupe espaço extra indesejado
-            />
+                {/* FlatList ajustada para ocupar apenas o espaço restante */}
+                <FlatList 
+                    data={shuffledFeed}
 
-        </View>
+                    ListHeaderComponent={
+                        <>
+                            <Header 
+                                sendIcon={sendDuck}
+                                titleIcon={logoIcon}
+                            />
+                        </>
+                    }
+
+                    keyExtractor={(item) => item.id}
+
+                    renderItem={
+                        ({ item }) => <ListContent data={item} />
+                    }
+                    
+                    showsVerticalScrollIndicator={false}
+                    contentContainerStyle={{ paddingBottom: 20 }}
+                    style={{ flexGrow: 0 }} // evita que ocupe espaço extra indesejado
+                    
+                />
+
+            </View>
+        
     )
 }
+
